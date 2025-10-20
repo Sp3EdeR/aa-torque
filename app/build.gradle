@@ -17,6 +17,14 @@ def acraVersion = '5.11.3'
 def ghOwner = "agronick"
 def ghPackage = "aa-torque"
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(19)
+    }
+}
+kotlin {
+    jvmToolchain(19)
+}
 
 android {
     namespace "com.aatorque.stats"
